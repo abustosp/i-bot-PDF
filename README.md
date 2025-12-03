@@ -1,68 +1,41 @@
-# Merge-last-page-PDF
+# I 🤖 PDF
 
+App web en Streamlit para consolidar o separar PDFs con selección por rangos y marcadores automáticos.
 
-Consolidación de las últimas hojas de todos los PDF de una carpeta
+## Funcionalidades
 
-## App web con Streamlit
+- Consolidar: todas las páginas, primeras, últimas o rangos por archivo (ej. `1, 2, 20, 25, 45:57, 66:89`). Crea bookmarks con el nombre del PDF y el rango usado.
+- Separar: todas las hojas, o rangos/páginas por archivo. Podés descargar un ZIP con PDFs individuales (cada uno con bookmark) o consolidar todo en un solo PDF con bookmarks anidados por archivo y rango.
+- Ordenar archivos por nombre y descargar con el nombre de salida que elijas.
+- Botón de donación a Cafecito incluido en la UI.
 
-- Ejecutá `streamlit run app.py` para abrir una página donde podés arrastrar varios PDF.
-- Modos: consolidar todas las páginas, solo las últimas, o elegir páginas por archivo (la primera y la última quedan preseleccionadas).
-- Permite ordenar por nombre y descargar el consolidado con el nombre que elijas.
+## Requisitos
 
----
+- Python 3.11+ (o usar Docker/Compose)
 
-El licenciamiento es bajo PL (es decir que no se puede distribuir comercialmente, solamente GRATIS). y si se utiliza este el código, su derivado también debe ser distribuido abierta y gratuitamente. 
+## Ejecutar con Python
 
----
+```bash
+pip install -r Requirements.txt
+streamlit run app.py
+```
 
-Los pasos para ejecutar el Script suele ser el siguiente:
+Abrí el enlace local que muestra Streamlit (por defecto http://localhost:8501).
 
-1. Descargarse Python (https://www.python.org/downloads/)
+## Ejecutar con Docker Compose
 
-2. Instalar Python (https://www.python.org/downloads/)
+```bash
+docker compose up --build
+```
 
-3. Crearse un entorno virtual. Generalmente se hace con el comando:
+Luego abrí http://localhost:8501.
 
-    ```Console
-    python -m venv NombreDelEntornoVirtualaCrear
-    ```
+## Uso rápido
 
-4.  Activar el entorno virtual (depdende del sistema operativo):
+- Subí uno o varios PDFs.
+- Elegí el modo (consolidar o separar) y define los rangos si aplica, usando comas para separar páginas/rangos.
+- Descargá el resultado (PDF o ZIP) con los bookmarks generados automáticamente.
 
-    - Windows
-    ```Console Windows
-    EntornoVirtual\Scripts\activate
-    ```
-    - Linux/Mac
-    ```Console Linux
-    source EntornoVirtual/bin/activate 
-    ```
+## Licencia
 
-5. Instalar las dependencias/Librerías del proyecto (generalmente se hace con el comando):
-
-    `pip install -r requirements.txt`
-
-    - Si no se tiene el requirements.txt, se puede instalar cada librería con el comando:
-
-        `pip install NombreDeLaLibreria1 NombreDeLaLibreria2==version NombreDeLaLibreria3>=version NombreDeLaLibreriaN<=version (generalmente suelo utilizar las siguientes librerias: pandas, numpy, lxml, customtkinter, matplotlib, seaborn , openpyxl, openai , PIL o pillow)`
-
-6. Descargar/Clonar el Script:
-  
-  - Descargar el ZIP o
-    
-  - Clonar el repositorio con el comando:
-
-    ```Console	
-    git clone URLDelRepositorio.git
-    ```
-
-
----
-
-## Aclaraciones
-
-El uso del Programa/Script se ejecuta bajo la responsabilidad de quien lo utiliza. No me hago responsable de los daños que pueda ocasionar el uso indevido del mismo.
-
-Si lo compartís debes hacelo gratis bajo los lineamientos de PL, adicionalmente podés mencioname también para que mas personas conozcan en el mundo de la programacion/automatización con Python/RPA y/o mostrale mis videos para que vean que cosas pueden hacer.
-
----
+Licencia PL: uso gratuito, no comercial; derivados deben mantenerse abiertos y gratuitos.
