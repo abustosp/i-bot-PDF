@@ -59,17 +59,30 @@ st.caption(
 )
 st.markdown(
     """
-    <a href="https://cafecito.app/abustos" target="_blank" style="text-decoration:none;">
-        <button style="
-            background-color:#ff4b4b;
-            color:white;
-            border:none;
-            padding:8px 16px;
-            border-radius:6px;
-            font-size:14px;
-            cursor:pointer;
-        ">❤️ Invitame un café</button>
-    </a>
+    <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:8px;">
+        <a href="https://cafecito.app/abustos" target="_blank" style="text-decoration:none;">
+            <button style="
+                background-color:#ff4b4b;
+                color:white;
+                border:none;
+                padding:8px 16px;
+                border-radius:6px;
+                font-size:14px;
+                cursor:pointer;
+            ">❤️ Invitame un café</button>
+        </a>
+        <a href="https://github.com/abustosp/i-bot-PDF" target="_blank" style="text-decoration:none;">
+            <button style="
+                background-color:#0a66c2;
+                color:white;
+                border:none;
+                padding:8px 16px;
+                border-radius:6px;
+                font-size:14px;
+                cursor:pointer;
+            ">⭐ Código abierto en GitHub</button>
+        </a>
+    </div>
     """,
     unsafe_allow_html=True,
 )
